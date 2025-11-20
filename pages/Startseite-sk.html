@@ -110,22 +110,19 @@
                     <div class="image-container">
                         <div class="image-slider">
                             <div class="image-slide active" data-image="0">
-                                <img src="" alt="Solar Installation" class="slider-image">
+                                <img src="../images/kolotoc5.JPG" alt="Solar Installation" class="slider-image">
                             </div>
                             <div class="image-slide" data-image="1">
-                                <img src="../images/solar1.jpg" alt="Solar Installation" class="slider-image">
+                                <img src="../images/hlavna1tt.JPG" alt="Solar Installation" class="slider-image">
                             </div>
                             <div class="image-slide" data-image="2">
-                                <img src="../images/solar2.jpg" alt="Solar Installation" class="slider-image">
+                                <img src="../images/kolotoc2.JPG" alt="Solar Installation" class="slider-image">
                             </div>
                             <div class="image-slide" data-image="3">
-                                <img src="../images/solar3.jpg" alt="Solar Installation" class="slider-image">
+                                <img src="../images/kolotoc3.JPG" alt="Solar Installation" class="slider-image">
                             </div>
                             <div class="image-slide" data-image="4">
-                                <img src="../images/solar4.jpg" alt="Solar Installation" class="slider-image">
-                            </div>
-                            <div class="image-slide" data-image="5">
-                                <img src="../images/solar5.jpg" alt="Solar Installation" class="slider-image">
+                                <img src="../images/kolotoc4.JPG" alt="Solar Installation" class="slider-image">
                             </div>
                         </div>
                         
@@ -276,63 +273,6 @@
 
        
 
-        // Feature layout toggle functionality
-        function switchLayout(type) {
-            const container = document.getElementById('featuresContainer');
-            const buttons = document.querySelectorAll('.toggle-btn');
-            
-            // Remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            if (type === 'single') {
-                container.className = 'features-grid';
-                buttons[0].classList.add('active');
-            } else {
-                container.className = 'features-grid grid-2x3';
-                buttons[1].classList.add('active');
-            }
-        }
-
-        // Card cycling functionality
-        let currentCard = 0;
-        const cards = document.querySelectorAll('.card');
-        const totalCards = cards.length;
-
-        function changeCard(direction) {
-            // Remove all classes first
-            cards.forEach(card => {
-                card.classList.remove('active', 'prev', 'next');
-            });
-            
-            // Store the current active card
-            const currentActiveCard = cards[currentCard];
-            
-            // Calculate new card index
-            const newCardIndex = (currentCard + direction + totalCards) % totalCards;
-            const newCard = cards[newCardIndex];
-            
-            // Set up animation classes based on direction
-            if (direction === 1) { // Moving right (next card)
-                currentActiveCard.classList.add('prev'); // Current card slides left
-                newCard.classList.add('next'); // New card slides in from right
-            } else { // Moving left (previous card)
-                currentActiveCard.classList.add('next'); // Current card slides right
-                newCard.classList.add('prev'); // New card slides in from left
-            }
-            
-            // Update current card index
-            currentCard = newCardIndex;
-            
-            // After animation, clean up classes and set active
-            setTimeout(() => {
-                cards.forEach(card => {
-                    card.classList.remove('prev', 'next');
-                });
-                newCard.classList.add('active');
-            }, 600);
-        }
-
-      
 
      
        

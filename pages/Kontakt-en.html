@@ -145,7 +145,7 @@
                     <!-- Replace with: <img src="path-to-image.jpg" alt="Name"> -->
                 </div>
                 <h3>Silvia Reznicakova</h3>
-                <div class="role">Accounting</div>
+                <div class="role">Accountant</div>
                 
                 <div class="contact-info">
                     <div class="contact-info-item">
@@ -200,70 +200,7 @@
             });
         });
 
-        // Language dropdown functionality
-        const languageToggle = document.getElementById('languageToggle');
-        const languageDropdown = document.getElementById('languageDropdown');
-        const languageSelector = document.querySelector('.language-selector');
-
-        if (languageToggle && languageDropdown && languageSelector) {
-            languageToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                languageDropdown.classList.toggle('active');
-                languageSelector.classList.toggle('active');
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
-                    languageDropdown.classList.remove('active');
-                    languageSelector.classList.remove('active');
-                }
-            });
-
-            // Handle language option clicks
-            document.querySelectorAll('.language-option').forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const lang = this.getAttribute('data-lang');
-                    
-                    // Get current page filename
-                    const currentPage = window.location.pathname.split('/').pop();
-                    
-                    // Replace language suffix (de, en, or sk) with new language
-                    const newPage = currentPage.replace(/-de\.html|-en\.html|-sk\.html/, `-${lang}.html`);
-                    
-                    // Redirect to the language version
-                    window.location.href = newPage;
-                });
-            });
-        }
-
-        // Hamburger menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-
-            // Close menu when clicking on a link
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                }
-            });
-        }
     </script>
+     <script src="../js/script.js"></script>
 </body>
 </html>

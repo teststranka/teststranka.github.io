@@ -470,6 +470,7 @@ nav .language-selector {
     width: 120%;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
 }
 
 .image-slider {
